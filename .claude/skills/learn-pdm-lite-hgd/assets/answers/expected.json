@@ -1,0 +1,39 @@
+{
+  "values": {
+    "a_spike_time": {
+      "value": "12:40",
+      "decimals": null,
+      "block": 1
+    },
+    "a_spike": {
+      "value": 3.5,
+      "decimals": 1,
+      "block": 1
+    },
+    "b_temp_start": {
+      "value": "13:00",
+      "decimals": null,
+      "block": 1
+    },
+    "b_vib_start": {
+      "value": "15:00",
+      "decimals": null,
+      "block": 1
+    },
+    "b_temp_limit": {
+      "value": 57.0,
+      "decimals": 2,
+      "block": 1
+    },
+    "b_vib_limit": {
+      "value": 1.12,
+      "decimals": 2,
+      "block": 1
+    },
+    "lead_minutes": {
+      "value": 160,
+      "decimals": 0,
+      "block": 1
+    }
+  }
+}

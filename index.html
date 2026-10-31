@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>노이즈 vs 추세</title>
+<style>
+:root { --bg:#fff; --ink:#1f2933; --muted:#616e7c; --a:#2563eb; --b:#c2410c; }
+@media (prefers-color-scheme: dark) { :root { --bg:#16191d; --ink:#e4e7eb; --muted:#9aa5b1; --a:#7ba7f7; --b:#f59e6b; } }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:system-ui,"Malgun Gothic",sans-serif; line-height:1.55; }
+main { max-width:720px; margin:0 auto; padding:24px 16px; }
+h1 { font-size:1.35rem; margin:0 0 8px; }
+p { margin:0 0 16px; }
+svg { display:block; width:100%; height:auto; }
+svg text { font-size:11px; }
+polyline { fill:none; stroke-width:2; }
+.a { stroke:var(--a); } .bl { stroke:var(--b); }
+.limit { stroke:var(--muted); stroke-dasharray:4 3; }
+.mark { stroke:var(--b); stroke-width:1; }
+.t { fill:var(--muted); } .h { fill:var(--ink); font-weight:600; }
+.b { fill:var(--b); font-weight:600; } .a-t { fill:var(--a); font-weight:600; }
+small { color:var(--muted); display:block; margin-top:16px; }
+</style></head><body><main>
+<h1>한 번의 튐이 아니라 추세적 상승이 신호다</h1>
+<p>설비A는 12:40에 진동 3.5으로 한 번 튄 노이즈입니다. 설비B는 온도 13:00, 진동 15:00부터 추세로, 평상 범위로 처음 잡힌 15:40보다 160분 빠릅니다.</p>
+<svg viewBox="0 0 480 352" role="img" aria-label="설비A 진동, 설비B 진동과 온도의 시간별 그래프"><text class="t" x="29" y="156.6" text-anchor="end">1</text><text class="t" x="29" y="113.7" text-anchor="end">2</text><text class="t" x="29" y="70.9" text-anchor="end">3</text><text class="t" x="29" y="28.0" text-anchor="end">4</text><text class="t" x="29" y="328.0" text-anchor="end">50</text><text class="t" x="29" y="295.6" text-anchor="end">55</text><text class="t" x="29" y="263.3" text-anchor="end">60</text><text class="t" x="29" y="230.9" text-anchor="end">65</text><text class="h" x="34" y="14">진동 (mm/s)</text><text class="h" x="34" y="204">설비B 온도 (℃)</text><line class="limit" x1="34" y1="147.6" x2="468" y2="147.6"/><text class="t" x="36" y="142.6">설비B 기준선 상한 1.12</text><line class="limit" x1="34" y1="278.7" x2="468" y2="278.7"/><text class="t" x="36" y="274.7">기준선 상한 57.00</text><line class="mark" x1="413.8" y1="24" x2="413.8" y2="174"/><text class="b" x="409.8" y="34" text-anchor="end">진동 추세 시작 15:00</text><line class="mark" x1="305.2" y1="214" x2="305.2" y2="324"/><text class="b" x="301.2" y="224" text-anchor="end">온도 추세 시작 13:00</text><polyline class="a" points="34.0,153.0 52.1,150.4 70.2,156.0 88.2,155.6 106.3,150.4 124.4,152.6 142.5,155.6 160.6,154.3 178.7,155.6 196.8,154.3 214.8,150.0 232.9,152.6 251.0,148.3 269.1,156.9 287.2,45.4 305.2,152.6 323.3,150.9 341.4,155.1 359.5,150.0 377.6,150.0 395.7,151.7 413.8,151.3 431.8,153.0 449.9,155.6 468.0,151.3"/><polyline class="bl" points="34.0,155.1 52.1,150.4 70.2,151.3 88.2,151.3 106.3,150.4 124.4,152.6 142.5,150.4 160.6,152.1 178.7,152.1 196.8,154.3 214.8,151.7 232.9,152.1 251.0,150.9 269.1,150.9 287.2,150.0 305.2,150.4 323.3,149.1 341.4,148.3 359.5,147.4 377.6,148.7 395.7,152.6 413.8,139.7 431.8,122.6 449.9,101.1 468.0,71.1"/><polyline class="bl" points="34.0,287.8 52.1,294.2 70.2,288.4 88.2,286.5 106.3,286.5 124.4,289.7 142.5,287.1 160.6,292.9 178.7,297.5 196.8,287.1 214.8,289.1 232.9,286.5 251.0,296.2 269.1,289.1 287.2,280.6 305.2,270.9 323.3,273.5 341.4,263.8 359.5,253.5 377.6,254.8 395.7,250.2 413.8,237.9 431.8,237.9 449.9,233.4 468.0,226.3"/><text class="a-t" x="281.2" y="49.4" text-anchor="end">설비A 12:40 3.5 한 번 (노이즈)</text><text class="b" x="468" y="65.1" text-anchor="end">설비B 2.9</text><text class="t" x="34.0" y="344" text-anchor="middle">08:00</text><text class="t" x="142.5" y="344" text-anchor="middle">10:00</text><text class="t" x="251.0" y="344" text-anchor="middle">12:00</text><text class="t" x="359.5" y="344" text-anchor="middle">14:00</text><text class="t" x="468.0" y="344" text-anchor="end">16:00</text></svg>
+<small>판정: 처음 12점 기준선의 평균 + 3 × 표준편차를 3번 연속 넘으면 추세. 실습용 가상 데이터. 출처: keerhee/kma-auto-genai-3-1, data/Day5/Day5_설비센서_50건_가상.csv</small>
+</main></body></html>
